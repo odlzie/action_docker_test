@@ -1,17 +1,13 @@
 # Container image that runs your code
 FROM python:3.10
-ADD . /app
 WORKDIR /app
 
+COPY ./requirements.txt /app
 # Install a dependency here directly into our app source dir
-#RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-# A distroless container image with Python and some basics like SSL certificates
-# https://github.com/GoogleContainerTools/distroless
-#FROM gcr.io/distroless/python3-debian10
-#COPY --from=builder /app /app
-#WORKDIR /app
+COPY action1/ ./action1
 
 #ENV PYTHONPATH /app
-CMD ["python", "./hello_world.py"]
+CMD ["python3", "./action1/hello_world.py"]
 #ENTRYPOINT ["python"]
