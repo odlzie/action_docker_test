@@ -11,11 +11,11 @@
 
 FROM python:3.10-alpine AS base
 WORKDIR /app
-#COPY ./action1/requirements.txt /app
-#RUN pip install -r requirements.txt
+COPY ./requirements.txt /app
+RUN pip install -r requirements.txt
 
 FROM base as src
-COPY ./action1/ /app
+COPY . /app
 
 FROM src as prod
 ENTRYPOINT ["python3"]
