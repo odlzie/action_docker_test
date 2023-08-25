@@ -1,5 +1,7 @@
 name: My Workflow
-on: [push]
+on:
+  push:
+    branches: main
 
 jobs:
   build:
@@ -8,7 +10,7 @@ jobs:
 
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: conduct action1
         id: action1
         uses: ./action1
