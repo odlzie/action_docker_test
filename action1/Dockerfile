@@ -15,7 +15,7 @@ WORKDIR /app
 #RUN pip install -r requirements.txt
 
 FROM base as src
-COPY . /app
+COPY ./action1/ /app
 
 FROM src as prod
 ENTRYPOINT ["python3"]
