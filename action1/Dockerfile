@@ -13,5 +13,5 @@ COPY --from=builder /app /app
 WORKDIR /app
 
 ENV PYTHONPATH /app
-CMD ["hello_world.py"]
-ENTRYPOINT ["python"]
+CMD ["/cmd/hello_world.py"]
+# ENTRYPOINT ["python"]
