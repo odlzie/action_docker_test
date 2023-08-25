@@ -12,8 +12,8 @@ jobs:
       - name: conduct action1
         id: action1
         uses: ./action1
-        with:
-          who-to-greet: world
+#        with:
+#          who-to-greet: world
 
       - name: Print output
         run: echo "${{ steps.action1.outputs.myprint }}"
