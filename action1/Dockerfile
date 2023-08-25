@@ -6,5 +6,5 @@ WORKDIR /app
 # Install a dependency here directly into our app source dir
 # RUN pip install -r requirements.txt
 
-#CMD ["python3", "./action1/hello_world.py"]
-ENTRYPOINT ["echo pwd"]
+CMD ["python3", "hello_world.py"]
+#ENTRYPOINT ["echo pwd"]
