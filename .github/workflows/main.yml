@@ -1,0 +1,18 @@
+name: My Workflow
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: print hello world
+
+    steps:
+      - name: conduct action1
+        id: action1
+        uses: ./action1
+        with:
+          who-to-greet: world
+
+      - name: Print output
+        run: echo "${{ steps.action1.outputs.myprint }}"
+
