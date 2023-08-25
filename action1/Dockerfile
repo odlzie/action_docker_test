@@ -11,8 +11,8 @@
 
 FROM python:3.10-alpine AS base
 WORKDIR /app
-COPY requirements.txt /app
-RUN pip3 install -r requirements.txt
+#COPY ./action1/requirements.txt /app
+#RUN pip install -r requirements.txt
 
 FROM base as src
 COPY . /app
