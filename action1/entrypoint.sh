@@ -2,4 +2,4 @@
 
 echo "Hellow $1"
 time=$(date)
-ech "time=$time" >> $GITHUB_OUTPUT
+echo "time=$time" >> $GITHUB_OUTPUT
