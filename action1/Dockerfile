@@ -15,8 +15,8 @@ WORKDIR /app
 #RUN pip install -r requirements.txt
 
 FROM base as src
-COPY ./hello_world.py /app
+COPY . /app
 
 FROM src as prod
 ENTRYPOINT ["python3"]
-CMD ["hello_world.py"]
+CMD ["./action1/hello_world.py"]
