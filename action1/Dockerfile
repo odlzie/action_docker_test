@@ -4,7 +4,7 @@ ADD . /app
 WORKDIR /app
 
 # Install a dependency here directly into our app source dir
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 # A distroless container image with Python and some basics like SSL certificates
 # https://github.com/GoogleContainerTools/distroless
@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 #WORKDIR /app
 
 #ENV PYTHONPATH /app
-CMD ["hello_world.py"]
-ENTRYPOINT ["python"]
+CMD ["python", "./hello_world.py"]
+#ENTRYPOINT ["python"]
